@@ -6,7 +6,7 @@
    "scripts": {
       "start": "node ./build/src/app.js",
       "start:dev": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
-      "build": "tsc -p .",
+      "build": "npm install && tsc -p .",
       "lint": "tslint --project tsconfig.json",
       "typeorm": "typeorm-ts-node-commonjs -d ./src/utils/data-source.ts",
       "migrate": "rm -rf build && npm run build && npm run typeorm migration:generate ./src/migrations/updated-course-entity",
